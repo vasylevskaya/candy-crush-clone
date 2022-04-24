@@ -11,3 +11,75 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  z-index: 5;
+  width: 560px;
+  height: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.notification_container {
+  z-index: 1;
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes opacityOff {
+  0% {
+      opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.notification {
+  z-index: 10;
+  color: rgb(246, 13, 13);
+  text-shadow: 7px 10px 2px black;
+  font-size: 50px;
+  font-weight: 400;
+  font-family: 'Faster One';
+  animation: opacityOff 2s normal forwards;
+
+}
+
+.score-board {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: red;
+  text-shadow: 3px 3px 3px black;
+}
+
+.game img {
+  width: 70px;
+  height: 70px;
+}
